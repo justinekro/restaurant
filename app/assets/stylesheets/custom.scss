@@ -92,10 +92,12 @@ h1 {
 
 .mySlides {
     display: none;
-    width: 300px;
+    overflow: hidden;
+    width: 500px;
+    height: 300px;
     text-align: center;
     img {
-    	height: 200px;
+    	height: 400px;
     }
 }
 
@@ -121,4 +123,22 @@ h1 {
 
 .dots {
 	margin-top: 10px;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }

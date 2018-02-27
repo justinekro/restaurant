@@ -19,11 +19,11 @@
 			<%= image_tag 'food2.jpg'%>
 		</div>
 
-		<p> <%= image_tag 'arrowright.png', class: "next", onclick:"plusSlides(1)"%> </p>
+		<p> <%= image_tag 'arrowright.png', class: "next", id:"next", onclick:"plusSlides(1)"%> </p>
 	</div>
 
 	<div class="dots" style="text-align:center">
-	  <span class="dot" onclick="currentSlide(1)"></span> 
+	  <span class="dot active" onclick="currentSlide(1)"></span> 
 	  <span class="dot" onclick="currentSlide(2)"></span> 
 	  <span class="dot" onclick="currentSlide(3)"></span> 
 	</div>
@@ -55,4 +55,6 @@
 <script>
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+document.getElementById("next").click();
+
 </script>
