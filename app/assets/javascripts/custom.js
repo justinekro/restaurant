@@ -1,3 +1,5 @@
+// Tab function
+
 function openTab(evt, tabName) {
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -18,3 +20,59 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+
+var slideIndex = 1;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+
+
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+
+// Carousel function : premiers essais
+
+/*
+function nextImage(n) {
+    var numimages;
+    numimages = document.getElementsByClassName("image");
+    console.log(numimages.length);
+
+    for (i = 0; i < numimages.length; i++)
+        if (numimages[i] = document.getElementById("displayed")) {
+            numimages[i].style = "display:none";
+            numimages[i].id = "";
+            console.log(numimages[i]);
+
+
+            numimages[i+n*1].style = "";            
+            numimages[i+n*1].id = "displayed";
+            console.log(numimages[i+1]);
+            break
+        }
+}
+*/
+

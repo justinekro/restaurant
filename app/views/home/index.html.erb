@@ -4,6 +4,31 @@
 		<h1>Justikro's Restaurant</h1>
 	</div>
 
+	<div class="slideshow-container">
+		<p> <%= image_tag 'arrowleft.png', class: "prev", onclick:"plusSlides(-1)"%> </p>
+		
+		<div class= 'mySlides fade' style = "display:block">
+			<%= image_tag 'food.jpg'%>
+		</div>
+
+		<div class= 'mySlides fade'>
+			<%= image_tag 'food1.jpg'%>
+		</div>
+
+		<div class= 'mySlides fade'>
+			<%= image_tag 'food2.jpg'%>
+		</div>
+
+		<p> <%= image_tag 'arrowright.png', class: "next", onclick:"plusSlides(1)"%> </p>
+	</div>
+
+	<div class="dots" style="text-align:center">
+	  <span class="dot" onclick="currentSlide(1)"></span> 
+	  <span class="dot" onclick="currentSlide(2)"></span> 
+	  <span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+
+<!-- Tab content -->
 	<div class="tab">
 	  <button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">About</button>
 	  <button class="tablinks" onclick="openTab(event, 'Menu')">Menu</button>
