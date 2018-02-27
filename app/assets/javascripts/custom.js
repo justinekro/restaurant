@@ -21,17 +21,15 @@ function openTab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-
+// Function that makes pictures slide (manually)
 var slideIndex = 1;
-
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-
 function currentSlide(n) {
-  showSlides(slideIndex += n);
+  showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
@@ -56,11 +54,19 @@ function showSlides(n) {
 
   slides[slideIndex-1].style.display = "block"; 
   dots[slideIndex-1].className += " active";
-  setInterval(showSlides,4000,slideIndex += 1)
 }
 
+// Function that makes pictures slide (automatically)
 
-// Carousel function : premiers essais
+function click() {
+    plusSlides(1);
+}
+setInterval(click, 5000);
+
+
+
+
+// Carousel function : first try
 
 /*
 function nextImage(n) {
