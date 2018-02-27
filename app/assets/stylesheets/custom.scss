@@ -1,0 +1,84 @@
+html {
+    height: 100%;
+}
+
+* {
+  padding: 0px;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	font-family: 'Lato', sans-serif;
+	background: asset-data-url('background.jpg');
+	background-size: cover;
+}
+
+h1 {
+	color:white;
+	margin-bottom: 60px;
+}
+
+.container {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 50%;
+}
+
+
+.content {
+	width:50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.tab {
+	font-family: 'Lato', sans-serif;
+	display: flex;
+	justify-content: center;
+	width: 600px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+	font-family: 'Lato', sans-serif;
+	width: 200px;
+	font-size: 16px;
+    float: left;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	font-family: 'Lato', sans-serif;
+
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+	font-family: 'Lato', sans-serif;
+
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+	background-color: rgba(255,255,255,0.2);
+	color: white;
+	width: 576px;
+    display: none;
+    padding: 6px 12px;
+    border-radius: 0px 0px 5px 5px;
+}

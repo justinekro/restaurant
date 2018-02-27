@@ -1,2 +1,33 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="container">
+
+	<div class="content">
+		<h1>Justikro's Restaurant</h1>
+	</div>
+
+	<div class="tab">
+	  <button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">About</button>
+	  <button class="tablinks" onclick="openTab(event, 'Menu')">Menu</button>
+	  <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
+	</div>
+
+<!-- Tab content -->
+	<div id="About" class="tabcontent">
+	  <h3>About this restaurant...</h3>
+	  <p>Un super restaurant trop bon</p>
+	</div>
+
+	<div id="Menu" class="tabcontent">
+	  <h3>Menu</h3>
+	  <p>Tout est bon dans le cochon</p> 
+	</div>
+
+	<div id="Contact" class="tabcontent">
+	  <h3>Contact</h3>
+	  <p>Made by justikro with love</p>
+	</div>
+</div>
+
+<script>
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
